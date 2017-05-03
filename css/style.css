@@ -19,11 +19,13 @@
   padding-left: 10px;
   font-family: 'Roboto', sans-serif;
 }
+
 .input-form {
   display: flex;
   justify-content: center;
   align-items:
 }
+
 .shoppingListContainer {
   display: flex;
   flex-direction: column;
@@ -47,12 +49,13 @@
   width: 50%;
   background: #7FCFE4;
 }
-body {
-  background: #B0D8D7;
-}
 
 .items:nth-child(odd) {
   background: #DDDEC9;
+}
+
+body {
+  background: #B0D8D7;
 }
 
 .button {
