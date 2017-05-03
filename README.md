@@ -43,7 +43,7 @@ To get started with DOMination, download this library into your project and incl
   * [`on`](#on)  
   * [`off`](#off)  
 
-[`AJAX`](#AJAX)  
+[AJAX](#ajax)  
 
 
 ### DOM Traversal
