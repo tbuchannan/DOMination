@@ -1,0 +1,76 @@
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.fullContainer {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.addItemInput {
+  border: 1px solid black;
+  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.input-form {
+  display: flex;
+  justify-content: center;
+  align-items:
+}
+.shoppingListContainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.shoppingList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.items {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25%;
+  width: 50%;
+  background: #7FCFE4;
+}
+body {
+  background: #B0D8D7;
+}
+
+.items:nth-child(odd) {
+  background: #DDDEC9;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 5px;
+  background: white;
+  margin-left: 10px;
+  padding: 3px;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+.button:hover{
+  background: #999;
+}
+
+.itemLabel {
+  margin: 5px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
