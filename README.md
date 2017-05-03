@@ -151,28 +151,46 @@ Sends HTTP Request and returns a `Promise` object.  Accepts a `Hash` object as a
   * url (default: window.location.href): URL for HTTP Request
   * success: success callback
   * error: error callback
-  * contentType (default: 'application/x-www-form-urlencoded; charset=UTF-8'): content type of HTTP Request
+  * contentType (default: 'text/plain'): content type of HTTP Request
 
 ```javascript
-$l.ajax({
-  url: "/widgets.json",
-  method: "POST",
-  data: {
-    widget: {
-      name: "The Best Widget",
-      maker: "The Widget King"
-    }
-  },
-  success(widgetData) {
-    console.log("Widget created!");
-    // `create` action should `render json: @widget`
-    // this gives the client access to the `id` attribute issued by
-    // the server.
-    console.log("issued id: " + widgetData.id);
-  }
-});
+$l.$ajax = function (options){
+  let defaults = {
+    method: 'GET',
+    url: window.location.href,
+    data: {},
+    contentType: 'text/plain',
+    success(data) {
+      JSON.parse(data);
+    },
+    error() { }
+  };
+  let requestOptions = $l.extend(defaults, options);
+
+  return new Promise(function (successCallback, failureCallback) {
+    const xhr = new XMLHttpRequest();
+    xhr.open(requestOptions['method'], requestOptions['url']);
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.state < 300) {
+        successCallback(xhr.response);
+      } else {
+        failureCallback({
+          status: xhr.status,
+          statusText: xhr.statusText
+        });
+      }
+    };
+    xhr.error = function() {
+      failureCallback({
+        status: xhr.status,
+        statusText: xhr.statusText
+      });
+    };
+    xhr.send(requestOptions['data']);
+  });
+};
 ```
 
 ## Example
 
-For an example of a project using the DOMination library, view the Snake Demo [code](https://github.com/amytfang/DOMination_demo).  To run the demo, clone the DOMination library and view the html file locally.
+For an example of a project using the DOMination library, view the ToDo List Demo.  To run the demo, clone the DOMination library and view the html file locally.
