@@ -43,7 +43,7 @@ To get started with DOMination, download this library into your project and incl
   * [`on`](#on)  
   * [`off`](#off)  
 
-[`$l.ajax`](#lajax)  
+[`AJAX`](#AJAX)  
 
 
 ### DOM Traversal
@@ -101,7 +101,7 @@ $l('.addItemButton').on('click', handler);
 $l('.addItemButton').off("click");
 ```
 
-## AJAX
+## `AJAX`
 
 Sends HTTP Request and returns a `Promise` object.  Accepts a `Hash` object as an argument with any of the following attributes:
   * method (default: "GET"): HTTP Request method or type
