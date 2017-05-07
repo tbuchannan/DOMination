@@ -94,7 +94,7 @@ Removes event listener from each `DOMNodeCollection` element.
 
 ```javascript
 function handler () {
-  console.log("Someone clicked me! HALP!"
+  console.log("Someone clicked me! HALP!")
 }
 
 $l('.addItemButton').on('click', handler);
