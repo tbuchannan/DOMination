@@ -10,14 +10,14 @@ DOMination is a JavaScript DOM interaction library, inspired by jQuery.  Using D
 
 ## Getting Started
 
-To get started with DOMination, download this library into your project and include the webpack output file `DOMination.js` in your source code.
+To get started with DOMination, download the `DOMination.js` located in the `lib` folder, and include it in your source code.
 
 ```html
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/reset.css">
-  <script src="./js/DOMination.js" type="text/javascript"></script>
+  <script src="./lib/DOMination.js" type="text/javascript"></script>
   ...
 </head>
 ```
