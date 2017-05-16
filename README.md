@@ -1,3 +1,5 @@
+[Live][link]
+[link]: http://tbuchannan.me/DOMination/
 # DOMination
 
 DOMination is a JavaScript DOM interaction library, inspired by jQuery.  Using DOMination, users can:
